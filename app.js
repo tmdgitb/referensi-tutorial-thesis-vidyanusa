@@ -16,6 +16,15 @@ var app = express();
 var mongoose = require('mongoose');
 var mongoDB = 'mongodb://ilham:qwerty@127.0.0.1:27017/belajar';
 
+var options = {
+  server: { socketOptions: { keepAlive: 30000, connectTimeoutMS: 30000, reconnectTries: 30, reconnectInterval: 5000  } },
+  replset: { socketOptions: { keepAlive: 30000, connectTimeoutMS: 30000, reconnectTries: 30, reconnectInterval: 5000  } }
+};
+
+mongoose.connect(mongoDB,options);
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');

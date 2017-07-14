@@ -1,9 +1,15 @@
 //Import model
-var userModel = require('../models/userModel');
+var users = require('../models/userModel');
 
-exports.daftar_pengguna = function(req,res) {
-  User.find({'profil.username':req.body.username})//inputan.username
+exports.daftar_pengguna = function(req,res) {//fungsi
+
+  users.find({})//Sama kaya select di mySQL
     .exec(function (err, results) {
-      res.json(results)
+      if(err){
+        res.send(err)
+      }else{
+        res.json(results)//response atau kembalian JSON
+      }
     });
+
 }
