@@ -10,6 +10,10 @@ var users = require('./routes/users');
 
 var app = express();
 
+//DB Connection
+var mongoose = require('mongoose');
+var mongoDB = 'mongodb://ilham:qwerty@127.0.0.1:27017/belajar';
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
