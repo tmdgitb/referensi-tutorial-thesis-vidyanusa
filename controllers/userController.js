@@ -30,3 +30,16 @@ exports.tambah_pengguna = function (req, res) {//menambahkan pengguna pada mongo
   })
 
 }
+
+exports.ubah_pengguna = function (req, res) {//mengubah pengguna pada dokumen di mongoDB
+
+  users.update({_id:req.body.id},{$set:{email:req.body.email}})
+    .exec(function (err, results) {
+      if(err){
+        res.json(err)
+      }else{
+        res.json({pesan:'Dokumen berhasil diubah.'})
+      }
+    })
+
+}

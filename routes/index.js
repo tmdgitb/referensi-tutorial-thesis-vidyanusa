@@ -13,4 +13,6 @@ router.get('/daftar_pengguna', userController.daftar_pengguna);
 
 router.post('/tambah_pengguna', userController.tambah_pengguna);
 
+router.post('/ubah_pengguna', userController.ubah_pengguna);
+
 module.exports = router;
