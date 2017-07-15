@@ -13,3 +13,20 @@ exports.daftar_pengguna = function(req,res) {//fungsi
     });
 
 }
+
+exports.tambah_pengguna = function (req, res) {//menambahkan pengguna pada mongoDB
+
+  var inputan_pengguna = new users({
+    email:req.body.email,
+    sandi:req.body.sandi
+  })
+
+  inputan_pengguna.save(function (err) {
+    if(err){
+      res.json(err)
+    }else{
+      res.json({pesan:'Pengguna berhasil ditambahkan'})
+    }
+  })
+
+}
