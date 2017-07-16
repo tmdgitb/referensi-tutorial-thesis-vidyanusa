@@ -15,4 +15,6 @@ router.post('/tambah_pengguna', userController.tambah_pengguna);
 
 router.post('/ubah_pengguna', userController.ubah_pengguna);
 
+router.post('/hapus_pengguna', userController.hapus_pengguna);
+
 module.exports = router;

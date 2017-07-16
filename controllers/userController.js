@@ -43,3 +43,16 @@ exports.ubah_pengguna = function (req, res) {//mengubah pengguna pada dokumen di
     })
 
 }
+
+exports.hapus_pengguna = function (req, res) {//hapus dokumen di mongoDB
+
+  users.remove({_id:req.body.id})
+    .exec(function (err, results) {
+      if(err){
+        res.json(err)
+      }else{
+        res.json({pesan:'Dokumen berhasil dihapus.'})
+      }
+    })
+
+}
