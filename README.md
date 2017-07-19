@@ -1,2 +1,2 @@
 # referensi-tutorial-thesis-vidyanusa
-Sumber pembelajaran yang berkaitan dengan teknis pembuatan produk thesis Vidyanusa.
+Tutorial penggunaan teknologi yang digunakan dalam thesis Vidyanusa. Repository ini merupakan sisi backend dari MEAN yang digunakan oleh Mobile dan Website. Silahkan lihat bagian Wiki untuk detail tutorialnya. Terimakasih.
